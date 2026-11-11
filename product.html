@@ -6,8 +6,11 @@
   <meta name="description" content="Карточка товара учебного интернет-магазина: описание, характеристики и цена.">
   <title>Товар 1 — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">ShopProject</a>
@@ -20,7 +23,7 @@
             <a class="site-nav__link" href="catalog.html">Каталог</a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active" href="product.html">
+            <a class="site-nav__link site-nav__link--active" href="product.html" aria-current="page">
               Товар
             </a>
           </li>
@@ -40,7 +43,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
       <span class="breadcrumbs__separator"> / </span>
@@ -51,10 +54,15 @@
     <article class="product">
       <img
         class="product__image"
-        src="images/product.svg"
+        src="images/product-1-640.jpg"
+        srcset="images/product-1-480.jpg 480w,
+                images/product-1-640.jpg 640w,
+                images/product-1-960.jpg 960w"
+        sizes="(max-width: 767px) 100vw,
+               50vw"
         alt="Изображение учебного товара «Товар 1»"
-        width="600"
-        height="400"
+        width="640"
+        height="426"
       >
 
       <div class="product__info">
@@ -69,29 +77,31 @@
     </article>
 
     <section class="section">
-      <table class="product-table">
-        <caption>Характеристики товара</caption>
-        <thead>
-          <tr>
-            <th>Параметр</th>
-            <th>Значение</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Категория</td>
-            <td>Учебный товар</td>
-          </tr>
-          <tr>
-            <td>Цена</td>
-            <td>1000 руб.</td>
-          </tr>
-          <tr>
-            <td>Наличие</td>
-            <td>В наличии</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrapper">
+        <table class="product-table">
+          <caption>Характеристики товара</caption>
+          <thead>
+            <tr>
+              <th scope="col">Параметр</th>
+              <th scope="col">Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Категория</th>
+              <td>Учебный товар</td>
+            </tr>
+            <tr>
+              <th scope="row">Цена</th>
+              <td>1000 руб.</td>
+            </tr>
+            <tr>
+              <th scope="row">Наличие</th>
+              <td>В наличии</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
 

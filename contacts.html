@@ -6,8 +6,11 @@
   <meta name="description" content="Контактная информация учебного интернет-магазина.">
   <title>Контакты — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">ShopProject</a>
@@ -26,7 +29,7 @@
             <a class="site-nav__link" href="order.html">Заявка</a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active" href="contacts.html">
+            <a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">
               Контакты
             </a>
           </li>
@@ -40,7 +43,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
       <span class="breadcrumbs__current">Контакты</span>
